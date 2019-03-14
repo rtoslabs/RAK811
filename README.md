@@ -1,3 +1,9 @@
+2019.3.14
+#Note:
+This repository will be closed.
+Please check the new firmware source code of RAK811 here:
+https://github.com/RAKWireless/RAK811_LoRaNode 
+
 # RAK811
 A LoRa module based on STM32L151 and SX1276 is designed to support the 868/915 band. Supported regions are EU868, US915, AU915, AS923, IN865, and KR920.
 
