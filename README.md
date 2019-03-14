@@ -1,5 +1,5 @@
 2019.3.14
-#Note:
+Note:
 This repository will be closed.
 Please check the new firmware source code of RAK811 here:
 https://github.com/RAKWireless/RAK811_LoRaNode 
