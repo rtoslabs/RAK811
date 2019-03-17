@@ -208,7 +208,7 @@ static void PrepareTxFrame( uint8_t port )
             uint16_t pressure = 0;
             int16_t altitudeBar = 0;
             int16_t temperature = 0;
-            int32_t latitude, longitude = 0;
+            int32_t latitude = 0, longitude = 0;
             int16_t altitudeGps = 0xFFFF;
             uint8_t batteryLevel = 0;
 

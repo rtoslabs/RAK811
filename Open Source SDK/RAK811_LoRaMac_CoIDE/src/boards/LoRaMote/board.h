@@ -83,7 +83,7 @@ Maintainer: Miguel Luis and Gregory Cristian
 #define LED_2                                       IOE_13
 #define LED_3                                       IOE_14
 #define LED_4                                       IOE_15
-
+#define GPS_PPS                                     PA_0
 /*!
  * Board MCU pins definitions
  */

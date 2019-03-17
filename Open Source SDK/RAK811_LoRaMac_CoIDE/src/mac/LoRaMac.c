@@ -17,7 +17,8 @@ License: Revised BSD License, see LICENSE.TXT file include in the project
 
 Maintainer: Miguel Luis ( Semtech ), Gregory Cristian ( Semtech ) and Daniel Jäckle ( STACKFORCE )
 */
-#include <math.h>
+//#include <math.h>
+#include "tgmath.h"
 #include "board.h"
 
 #include "LoRaMacCrypto.h"
@@ -3256,7 +3257,7 @@ LoRaMacStatus_t SendFrameOnChannel( ChannelParams_t channel )
 {
     int8_t datarate = Datarates[LoRaMacParams.ChannelsDatarate];
     int8_t txPowerIndex = 0;
-    int8_t txPower = 0;
+    uint32_t txPower = 0;
 
     txPowerIndex = LimitTxPower( LoRaMacParams.ChannelsTxPower, Bands[channel.Band].TxMaxPower );
     txPower = TxPowers[txPowerIndex];
@@ -3313,7 +3314,7 @@ LoRaMacStatus_t SendFrameOnChannel( ChannelParams_t channel )
     McpsConfirm.TxTimeOnAir = TxTimeOnAir;
     MlmeConfirm.TxTimeOnAir = TxTimeOnAir;
 
-    printf("\r\nFreq=%d, txP=%d dbm, DR%d , txtime=%d\r\n", channel.Frequency, txPower, LoRaMacParams.ChannelsDatarate, TxTimeOnAir);
+    printf("\r\nFreq=%lu, txP=%lu dbm, DR%d, txtime=%lu\r\n", channel.Frequency, txPower, LoRaMacParams.ChannelsDatarate, TxTimeOnAir);
 
     // Starts the MAC layer status check timer
     TimerSetValue( &MacStateCheckTimer, MAC_STATE_CHECK_TIMEOUT );
