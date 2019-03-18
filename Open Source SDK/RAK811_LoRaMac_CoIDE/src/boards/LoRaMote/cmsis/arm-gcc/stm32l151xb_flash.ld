@@ -128,4 +128,12 @@ SECTIONS
 	
 	/* Check if data + heap + stack exceeds RAM limit */
 	ASSERT(__StackLimit >= __HeapLimit, "region RAM overflowed with stack")
+	  /* Remove information from the standard libraries */
+  	/DISCARD/ :
+  	{
+    	libc.a ( * )
+    	libm.a ( * )
+    	libgcc.a ( * )
+  	}
+
 }

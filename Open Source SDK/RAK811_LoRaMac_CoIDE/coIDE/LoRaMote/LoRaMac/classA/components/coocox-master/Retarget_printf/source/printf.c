@@ -22,14 +22,14 @@
  * @param  pStr	Storage string.
  * @param  c    Character to write.
  */
-extern UART_HandleTypeDef UartHandle;
+extern USART_HandleTypeDef UartHandle;
 __attribute__ ((weak)) void PrintChar(char c)
 {
 	/* Send a char like: 
 	   while(Transfer not completed);
 	   Transmit a char;
 	*/	
-	HAL_UART_Transmit(&UartHandle,&c,1,0xff);
+	HAL_USART_Transmit(&UartHandle,(uint8_t *)&c,1,0xff);
 }
 
 /** Maximum string size allowed (in bytes). */

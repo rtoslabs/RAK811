@@ -160,7 +160,7 @@ void BoardInitMcu( void )
 
 void BoardDeInitMcu( void )
 {
-    Gpio_t ioPin;
+    //Gpio_t ioPin;
 
     AdcDeInit( &Adc );
 
